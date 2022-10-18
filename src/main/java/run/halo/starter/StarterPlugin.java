@@ -2,7 +2,6 @@ package run.halo.starter;
 
 import org.pf4j.PluginWrapper;
 import org.springframework.stereotype.Component;
-import run.halo.app.extension.Scheme;
 import run.halo.app.extension.SchemeManager;
 import run.halo.app.plugin.BasePlugin;
 
@@ -21,12 +20,9 @@ public class StarterPlugin extends BasePlugin {
 
     @Override
     public void start() {
-        schemeManager.register(Apple.class);
     }
 
     @Override
     public void stop() {
-        Scheme scheme = schemeManager.get(Apple.class);
-        schemeManager.unregister(scheme);
     }
 }
